@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var passwordText = document.querySelector("test");
 
   passwordText.value = password;
 
@@ -24,9 +24,19 @@ var passwordLength = "";
 
 function buttonPressing() {
   passwordLength = prompt("Please enter a password length, from 8 to 128." , "8");
+  console.log("This is pre parse " + passwordLength);
   passwordLength = parseInt(passwordLength);
+  console.log("This is post parse " + passwordLength);
+
+  if(isNaN(passwordLength) == true){
+    alert("Stop trying to break me >:( Enter a number!!!");
+    return;
+  }
+
   passwordText = "";
   var finalArray = [""];
+
+
 
   if(passwordLength < 8){
     alert("Number inputted was too low. 8 characters have been selected for your password's length");
@@ -37,6 +47,8 @@ function buttonPressing() {
     alert("Number inputted was too high. 128 characters have been selected for your password's length");
     passwordLength = 128;
   }
+
+  
 
   var lowerCaseBool = confirm("Would you like the password to contain lowercase letters? Hit 'Cancel' for no.");
   var upperCaseBool = confirm("Would you like the password to contain uppercase letters? Hit 'Cancel' for no.");
@@ -66,7 +78,7 @@ function buttonPressing() {
     passwordText += finalArray[randomElement];
   }
 
-  console.log(passwordText);
+  alert(passwordText);
 
 }
 
