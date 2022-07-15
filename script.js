@@ -25,6 +25,11 @@ var passwordLength = "";
 function buttonPressing() {
   passwordLength = prompt("Please enter a password length, from 8 to 128." , "8");
   passwordLength = parseInt(passwordLength);
+
+  if(isNaN(passwordLength) == true){
+    alert("Stop trying to break me >:( Enter a real number");
+  }
+
   passwordText = "";
   var finalArray = [""];
 
@@ -66,7 +71,7 @@ function buttonPressing() {
     passwordText += finalArray[randomElement];
   }
 
-  console.log(passwordText);
+  alert("Your random password is " + passwordText);
 
 }
 
