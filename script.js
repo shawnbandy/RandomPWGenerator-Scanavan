@@ -19,9 +19,6 @@ var uppercaseArr = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", 
 var numericArr = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 var specialcharArr = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ",", ".", "/", ":", ";", "<", ">", "=", "?", "[", "]", "|", "{", "}"];
 
-var finalArray = [""];
-
-var passwordText = "";
 var passwordLength = "";
 
 
@@ -29,6 +26,7 @@ function buttonPressing() {
   passwordLength = prompt("Please enter a password length, from 8 to 128." , "8");
   passwordLength = parseInt(passwordLength);
   passwordText = "";
+  var finalArray = [""];
 
   if(passwordLength < 8){
     alert("Number inputted was too low. 8 characters have been selected for your password's length");
@@ -62,9 +60,10 @@ function buttonPressing() {
   if(specialCharBool == true){
     finalArray = finalArray.concat(specialcharArr);
   }
-  
-  for(var i = 0; i < finalArray.length; i++){
-    console.log(finalArray[i]);
+
+  for(var i = 0; i < passwordLength; i++){
+    var randomElement = Math.floor(Math.random() * finalArray.length);
+    passwordText += finalArray[randomElement];
   }
 
   console.log(passwordText);
