@@ -26,11 +26,17 @@ function buttonPressing() {
   passwordLength = prompt("Please enter a password length, from 8 to 128." , "8");
   console.log("This is pre parse " + passwordLength);
   passwordLength = parseInt(passwordLength);
+<<<<<<< HEAD
   console.log("This is post parse " + passwordLength);
 
   if(isNaN(passwordLength) == true){
     alert("Stop trying to break me >:( Enter a number!!!");
     return;
+=======
+
+  if(isNaN(passwordLength) == true){
+    alert("Stop trying to break me >:( Enter a real number");
+>>>>>>> a05890588d2234a3a8b12f7a735f4240dc96735d
   }
 
   passwordText = "";
@@ -78,7 +84,11 @@ function buttonPressing() {
     passwordText += finalArray[randomElement];
   }
 
+<<<<<<< HEAD
   alert(passwordText);
+=======
+  alert("Your random password is " + passwordText);
+>>>>>>> a05890588d2234a3a8b12f7a735f4240dc96735d
 
 }
 
