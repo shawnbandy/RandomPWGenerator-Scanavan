@@ -4,15 +4,16 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("test");
-
-  passwordText.value = password;
+  var passwordResult = document.querySelector("#password");
+  
+  passwordResult.value = passwordText; 
 
 }
 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
 
 //*list of all characters that can be in the password
 var lowercaseArr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -24,7 +25,7 @@ var specialcharArr = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-"
 var passwordLength = "";
 
 
-function buttonPressing() {
+function generatePassword() {
   //*ask user for password length, parse the int from input
   passwordLength = prompt("Please enter a password length, from 8 to 128." , "8");
   passwordLength = parseInt(passwordLength);
@@ -33,6 +34,7 @@ function buttonPressing() {
   //*these if statements are to prevent user from inputing improper values
   if(isNaN(passwordLength) == true){
     alert("Stop trying to break me >:( Enter a real number");
+    return;
   }
   if(passwordLength < 8){
     alert("Number inputted was too low. 8 characters have been selected for your password's length");
@@ -95,10 +97,6 @@ function buttonPressing() {
     var randomElement = Math.floor(Math.random() * finalArray.length);
     passwordText += finalArray[randomElement];
   }
-  
-  //*shows user the password
-
-  alert("Your password is " + passwordText);
 
 }
 
