@@ -1,9 +1,7 @@
 Original Assignment Goals:
 1. When button is clicked, user is to be prompted with prompts for password criteria 
 2. User should be able to select which type of criteria to include
-
 2a. These criteria include: lowercase, uppercase, numbers, and special characters 
-
 2b. When criteria is selected, password MUST contain at least one character from each type selected
 3. User should be able to choose length of password from 8-128 characters long
 4. A password should be generated after answering all criteria 
