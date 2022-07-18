@@ -16,11 +16,8 @@ This was achieved by:
 
 
 Application Description: 
-<<<<<<< HEAD
 This application generates a random password depending on user specifications. The user is able to select from a different criteria of characters, such as lowercase and uppercase letters, numbers, and other special characters, as well as password length. Password contents change depending on user's criteria specifications, and the final password is displayed on the page for user to copy.
 
-||||||| 2509de7
-This application generates a random password depending on user specifications. The user is able to select from a different criteria of characters, such as lowercase and uppercase letters, numbers, and other special characters, as well as password length. Password contents change depending on user's criteria specifications, and the final password is displayed on the page for user to copy. 
-=======
-This application generates a random password depending on user specifications. The user is able to select from a different criteria of characters, such as lowercase and uppercase letters, numbers, and other special characters, as well as password length. Password contents change depending on user's criteria specifications, and the final password is displayed on the page for user to copy. 
->>>>>>> c6e27c6f5f5723665cd0a3a0eb26defe4080b22e
+Link to deployed application on github.io :
+https://shawnbandy.github.io/RandomPWGenerator-Scanavan/
+
