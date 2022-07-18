@@ -22,8 +22,6 @@ var numericArr = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 var specialcharArr = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ",", ".", "/", ":", ";", "<", ">", "=", "?", "[", "]", "|", "{", "}"];
 
 
-
-
 function generatePassword() {
 
   //*empty password string
@@ -85,10 +83,8 @@ function generatePassword() {
   }
 
 
-  console.log("Hit the for loop. Password is currently " + passwordText + " and its length is " + passwordLength);
-
-  //*for statement sets i to holder value, then loops through the following:
-  //*generate a randomNumber, then add a character from finalArray at index of randomNumber until PW length is achieved 
+  //*for statement sets i to current passwordText's length, then loops through the following:
+  //*generate a randomNumber, then add a character from curated finalArray at index of randomNumber until PW length is achieved 
   for(var i = passwordText.length; i < passwordLength; i++){
     var randomElement = Math.floor(Math.random() * finalArray.length);
     passwordText += finalArray[randomElement];
