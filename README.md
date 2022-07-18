@@ -16,4 +16,5 @@ This was achieved by:
 
 
 Application Description: 
-This application generates a random password depending on user specifications. The user is able to select from a different criteria of characters, such as lowercase and uppercase letters, numbers, and other special characters, as well as password length. Password contents change depending on user's criteria specifications, and the final password is displayed on the page for user to copy. 
+This application generates a random password depending on user specifications. The user is able to select from a different criteria of characters, such as lowercase and uppercase letters, numbers, and other special characters, as well as password length. Password contents change depending on user's criteria specifications, and the final password is displayed on the page for user to copy.
+

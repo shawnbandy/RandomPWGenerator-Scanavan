@@ -21,17 +21,20 @@ var uppercaseArr = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", 
 var numericArr = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 var specialcharArr = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ",", ".", "/", ":", ";", "<", ">", "=", "?", "[", "]", "|", "{", "}"];
 
-//*empty password string
-var passwordLength = "";
+
 
 
 function generatePassword() {
+
+  //*empty password string
+  var passwordLength = "";
+
   //*ask user for password length, parse the int from input
   passwordLength = prompt("Please enter a password length, from 8 to 128." , "8");
   passwordLength = parseInt(passwordLength);
 
 
-  //*these if statements are to prevent user from inputing improper values
+  //*these if statements are to prevent user from inputting improper values
   if(isNaN(passwordLength) == true){
     alert("Stop trying to break me >:( Enter a real number");
     return;
@@ -45,7 +48,6 @@ function generatePassword() {
     passwordLength = 128;
   }
 
-  //*repeat of passwordText? may delete original
   //*final array will be the collection of all characters that the user wants in their password
   passwordText = "";
   var finalArray = [""];
@@ -62,38 +64,29 @@ function generatePassword() {
     return;
   }
 
-  //*holder is a generic int that will be used in a later for loop, check below
-  var holder = 0;
-
-
   //*below if statements are to check if the user has answered yes to wanting specific characters in their PW
   //*if user answered yes, then the character array is added to finalArray
   //*lastly, we choose a random character from the original array to add to PW, reasons below
   if(lowerCaseBool == true){
     finalArray = finalArray.concat(lowercaseArr);
     passwordText += lowercaseArr[Math.floor(Math.random() * lowercaseArr.length)];
-    //*holder is increased if they answered yes to any bool
-    holder++;
   }
   if(upperCaseBool == true){
     finalArray = finalArray.concat(uppercaseArr);
     passwordText += uppercaseArr[Math.floor(Math.random() * uppercaseArr.length)];
-    holder++;
   }
   if(numericBool == true){
     finalArray = finalArray.concat(numericArr);
     passwordText += numericArr[Math.floor(Math.random() * numericArr.length)];
-    holder++;
   }
   if(specialCharBool == true){
     finalArray = finalArray.concat(specialcharArr);
     passwordText += specialcharArr[Math.floor(Math.random() * specialcharArr.length)];
-    holder++;
   }
 
   //*for statement sets i to holder value, then loops through the following:
   //*generate a randomNumber, then add a character from finalArray at index of randomNumber until PW length is achieved 
-  for(var i = holder; i < passwordLength; i++){
+  for(var i = passwordText.length; i < passwordLength; i++){
     var randomElement = Math.floor(Math.random() * finalArray.length);
     passwordText += finalArray[randomElement];
   }
