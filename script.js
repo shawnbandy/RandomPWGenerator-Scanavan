@@ -50,7 +50,7 @@ function generatePassword() {
 
   //*final array will be the collection of all characters that the user wants in their password
   passwordText = "";
-  var finalArray = [""];
+  var finalArray = [];
 
   //*these bools are for asking the user if they want specific characters in their password
   var lowerCaseBool = confirm("Would you like the password to contain lowercase letters? Hit 'Cancel' for no.");
@@ -83,6 +83,9 @@ function generatePassword() {
     finalArray = finalArray.concat(specialcharArr);
     passwordText += specialcharArr[Math.floor(Math.random() * specialcharArr.length)];
   }
+
+
+  console.log("Hit the for loop. Password is currently " + passwordText + " and its length is " + passwordLength);
 
   //*for statement sets i to holder value, then loops through the following:
   //*generate a randomNumber, then add a character from finalArray at index of randomNumber until PW length is achieved 
