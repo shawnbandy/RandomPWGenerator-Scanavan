@@ -64,7 +64,7 @@ function generatePassword() {
 
   //*below if statements are to check if the user has answered yes to wanting specific characters in their PW
   //*if user answered yes, then the character array is added to finalArray
-  //*lastly, we choose a random character from the original array to add to PW, reasons below
+  //*lastly, we choose a random character from the array being added and immediately add a character at random to PW
   if(lowerCaseBool == true){
     finalArray = finalArray.concat(lowercaseArr);
     passwordText += lowercaseArr[Math.floor(Math.random() * lowercaseArr.length)];
