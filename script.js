@@ -53,7 +53,7 @@ function generatePassword() {
   //*these bools are for asking the user if they want specific characters in their password
   var lowerCaseBool = confirm("Would you like the password to contain lowercase letters? Hit 'Cancel' for no.");
   var upperCaseBool = confirm("Would you like the password to contain uppercase letters? Hit 'Cancel' for no.");
-  var numericBool = confirm("Would you like the password to contain  numbers? Hit 'Cancel' for no.");
+  var numericBool = confirm("Would you like the password to contain numbers? Hit 'Cancel' for no.");
   var specialCharBool = confirm("Would you like the password to contain special characters? Hit 'Cancel' for no.");
 
   //*throwing this catch in there if the user says they don't want any characters in their password
